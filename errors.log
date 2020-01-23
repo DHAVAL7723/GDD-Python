@@ -1,0 +1,25 @@
+2019-03-26 10:51:44,761 - ERROR - list index out of range
+Traceback (most recent call last):
+  File "<ipython-input-5-a6896ddde33c>", line 50, in _run_meas
+    self.process_inst.update_data()
+  File "<ipython-input-3-adb0c2f2c20c>", line 179, in update_data
+    time_win = self.timeS[ind_start[i]:ind_stop[i]]
+IndexError: list index out of range
+2019-03-26 11:03:14,896 - ERROR - index 0 is out of bounds for axis 0 with size 0
+Traceback (most recent call last):
+  File "<ipython-input-15-a6896ddde33c>", line 50, in _run_meas
+    self.process_inst.update_data()
+  File "<ipython-input-13-f7488cd92ee9>", line 142, in update_data
+    if start_ind_z[0] > stop_ind_z[0]:
+IndexError: index 0 is out of bounds for axis 0 with size 0
+2019-03-26 11:49:37,762 - ERROR - PicoSDK returned 'PICO_NO_SAMPLES_AVAILABLE'
+Traceback (most recent call last):
+  File "<ipython-input-20-a6896ddde33c>", line 50, in _run_meas
+    self.process_inst.update_data()
+  File "<ipython-input-18-f7488cd92ee9>", line 88, in update_data
+    self.timeS,data = self.ps.DAQ_read()
+  File "M:\Int_internship\International Internship\GDD_Dhaval\GDD\PicoScope.py", line 152, in DAQ_read
+    assert_pico_ok(self.status["getValues"])
+  File "D:\winpython\python\modules\picosdk\functions.py", line 133, in assert_pico_ok
+    raise PicoSDKCtypesError("PicoSDK returned '{}'".format(PICO_STATUS_LOOKUP[status]))
+picosdk.errors.PicoSDKCtypesError: PicoSDK returned 'PICO_NO_SAMPLES_AVAILABLE'
